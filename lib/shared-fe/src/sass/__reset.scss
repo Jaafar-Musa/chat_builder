@@ -1,0 +1,8 @@
+// @use "variables";
+@use "./_typography";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: typography.$robot-mono-regular-400;
+}
