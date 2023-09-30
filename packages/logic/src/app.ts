@@ -4,6 +4,7 @@ import morgan from "morgan"
 import router from "./routes"
 import cors from "cors"
 import { errorMW, notFound } from "./middleware"
+import "express-async-errors"
 
 
 const app = express()
