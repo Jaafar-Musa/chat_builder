@@ -15,10 +15,15 @@
   "workspaces": [
     "packages/stream",
     "packages/logic",
+    "packages/portal",
     "lib/shared-api",
     "lib/shared-fe"
   ],
   "devDependencies": {
+    "@types/node": "^20.8.0",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "zod": "^3.22.2"
   }
 }
