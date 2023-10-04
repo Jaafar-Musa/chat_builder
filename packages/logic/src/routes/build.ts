@@ -1,11 +1,8 @@
 import { Router } from "express";
-import { BadRequest } from "../errors";
+import { ping } from "../services";
 
 const router = Router()
 
-router.get("/",(req,res)=>{
-    throw new BadRequest("tes")
-    res.send("The server is live")
-})
+router.get("/",ping)
 
 export default router

@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import config from "../config";
-import { IErrorResponse } from "../types/ErrorResponse";
+import { IErrorResponse } from "../types";
 import { CustomError } from "../errors";
 
 /**

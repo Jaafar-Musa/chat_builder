@@ -1,4 +1,4 @@
-import { IErrorResponse } from "../types/ErrorResponse";
+import { IErrorResponse } from "../types";
 
 abstract class CustomError extends Error{
     abstract readonly error : IErrorResponse

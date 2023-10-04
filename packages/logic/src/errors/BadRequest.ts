@@ -1,4 +1,4 @@
-import { IErrorResponse } from "../types/ErrorResponse";
+import { IErrorResponse } from "../types";
 import CustomError from "./CustomError";
 
 class BadRequest extends CustomError{
