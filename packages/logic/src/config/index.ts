@@ -12,4 +12,5 @@ export default {
     MONGO_PORT : process.env.MONGO_PORT,
     MONGO_DBNAME : process.env.MONGO_DBNAME,
     MONGO_LOCAL : process.env.MONGO_LOCAL,  
+    REDIS_URL  : process.env.REDIS_URL
 } satisfies IENV

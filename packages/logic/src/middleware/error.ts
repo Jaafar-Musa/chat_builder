@@ -8,7 +8,7 @@ import { CustomError } from "../errors";
  */
 export default (
   err: Error,
-  req: Request,
+  __: Request,
   res: Response<IErrorResponse>,
   _: NextFunction
 ) => {

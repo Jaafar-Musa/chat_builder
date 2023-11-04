@@ -18,4 +18,4 @@ export interface ChatMenuMapperDefinition{
 //     id Int @id @default(autoincrement())
 //     mapFrom String @db.VarChar(25)
 //     mapTo String @db.VarChar(25)
-//   } 
+//   }  

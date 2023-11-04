@@ -13,5 +13,5 @@ export interface IENV{
     MONGO_PORT?:string,
     MONGO_DBNAME?:string,
     MONGO_LOCAL?:string,
-  
+    REDIS_URL?:string
 }

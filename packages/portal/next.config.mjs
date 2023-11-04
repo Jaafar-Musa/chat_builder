@@ -1,22 +1,30 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /**
- * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially useful
- * for Docker builds.
+ * @type {import("next").NextConfig}
  */
-await import("./src/env.mjs");
-
-/** @type {import("next").NextConfig} */
+import MonacoWebpackPlugin from "monaco-editor-webpack-plugin";
+const monacoRules = [
+  {
+    test: /\.ttf$/,
+    type: 'asset/resource'
+  }
+]
 const config = {
-  reactStrictMode: true,
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.plugins.push(new MonacoWebpackPlugin({
+        languages: ["typescript", "yaml"],
+        filename: "static/[name].worker.js",
 
-  /**
-   * If you are using `appDir` then you must comment the below `i18n` config out.
-   *
-   * @see https://github.com/vercel/next.js/issues/41980
-   */
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
+      }));
+      config.module.rules.push(...monacoRules)
+    }
+
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+    return config;
   },
+  reactStrictMode: true,
 };
 
 export default config;
